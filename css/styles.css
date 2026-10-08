@@ -1,268 +1,241 @@
-/* ================================
-   CONFIGURACIÓN GENERAL
-================================ */
+/* Configuración general */
 
 * {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
 }
 
-html {
-    scroll-behavior: smooth;
-}
+
+/* Estilos del cuerpo */
 
 body {
-    font-family: Arial, Helvetica, sans-serif;
-    background: #0b0b0f;
-    color: #ffffff;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #222222;
     line-height: 1.6;
 }
 
 
-/* ================================
-   HEADER
-================================ */
+/* Encabezado */
 
 header {
-    width: 100%;
-    background: #111116;
-    border-bottom: 1px solid #292932;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+    background-color: #0055a5;
+    color: #ffcc00;
+    text-align: center;
+    padding: 30px;
+}
+
+header h1 {
+    font-size: 45px;
+    margin-bottom: 10px;
+}
+
+header p {
+    color: white;
+    font-size: 18px;
 }
 
 
-/* ================================
-   NAVEGACIÓN
-================================ */
+/* Menú de navegación */
 
 nav {
-    max-width: 1200px;
-    margin: auto;
-    padding: 18px 30px;
+    background-color: #ffcc00;
+    text-align: center;
+    padding: 15px;
 }
 
-nav ul {
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
+nav a {
+    color: #0055a5;
+    text-decoration: none;
+    font-weight: bold;
+    margin: 0 15px;
 }
 
-nav ul li {
-    color: #d6d6d6;
-    padding: 10px 18px;
-    border-radius: 8px;
-    cursor: pointer;
-    font-size: 15px;
-    font-weight: 600;
-    transition: all 0.3s ease;
-}
-
-nav ul li:hover {
-    background: #e50914;
-    color: #ffffff;
-    transform: translateY(-2px);
+nav a:hover {
+    color: #000000;
 }
 
 
-/* ================================
-   MAIN
-================================ */
+/* Contenido principal */
 
 main {
-    width: 100%;
-}
-
-
-/* ================================
-   SECCIONES
-================================ */
-
-main > section {
+    width: 90%;
     max-width: 1200px;
-    margin: auto;
-    padding: 70px 30px;
+    margin: 30px auto;
 }
 
 
-/* ================================
-   PRIMERA SECCIÓN
-   (ESPACIO PARA FUTURO BANNER)
-================================ */
+/* Secciones */
 
-main > section:first-child {
-    max-width: none;
-    min-height: 420px;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    background:
-        linear-gradient(
-            rgba(0, 0, 0, 0.65),
-            rgba(0, 0, 0, 0.85)
-        ),
-        linear-gradient(
-            135deg,
-            #1a1a24,
-            #0b0b0f
-        );
-
-    border-bottom: 1px solid #292932;
-}
-
-
-/* ================================
-   SECCIÓN DE ARTÍCULOS
-================================ */
-
-main > section:nth-child(2) {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 25px;
-}
-
-
-/* ================================
-   ARTÍCULOS
-================================ */
-
-article {
-    background: #17171e;
+section {
+    background-color: white;
+    margin-bottom: 30px;
     padding: 30px;
-    border-radius: 14px;
-    border: 1px solid #292932;
-
-    transition:
-        transform 0.3s ease,
-        box-shadow 0.3s ease,
-        border-color 0.3s ease;
+    border-radius: 10px;
 }
 
-article:hover {
-    transform: translateY(-8px);
-    border-color: #e50914;
-
-    box-shadow:
-        0 15px 35px rgba(0, 0, 0, 0.45);
-}
-
-
-/* ================================
-   TÍTULOS
-================================ */
-
-article h2 {
-    color: #ffffff;
-    font-size: 22px;
+section h2 {
+    color: #0055a5;
     margin-bottom: 15px;
-    position: relative;
+    border-bottom: 4px solid #ffcc00;
     padding-bottom: 10px;
 }
 
-article h2::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: 0;
 
-    width: 45px;
-    height: 3px;
+/* Imagen principal */
 
-    background: #e50914;
+section img {
+    max-width: 100%;
+    display: block;
+    margin: 20px auto;
+    border-radius: 8px;
+}
+
+
+/* Contenedor de películas */
+
+.peliculas {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+
+/* Tarjetas de películas */
+
+article {
+    width: 33%;
+    background-color: #f5f5f5;
+    border: 3px solid #0055a5;
+    border-radius: 10px;
+    padding: 15px;
+    text-align: center;
+}
+
+article img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    margin: 0 0 15px 0;
+}
+
+article h3 {
+    color: #0055a5;
+    margin-bottom: 10px;
+}
+
+article a {
+    display: inline-block;
+    background-color: #0055a5;
+    color: white;
+    padding: 10px 15px;
+    margin-top: 15px;
+    text-decoration: none;
     border-radius: 5px;
 }
 
-
-/* ================================
-   PÁRRAFOS
-================================ */
-
-article p {
-    color: #b8b8c0;
-    font-size: 15px;
-    line-height: 1.8;
+article a:hover {
+    background-color: #ffcc00;
+    color: #0055a5;
 }
 
 
-/* ================================
-   ÚLTIMA SECCIÓN
-   (ESPACIO PARA FUTURO CONTENIDO)
-================================ */
+/* Tabla */
 
-main > section:last-child {
-    min-height: 250px;
-    border-top: 1px solid #292932;
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th {
+    background-color: #0055a5;
+    color: white;
+    padding: 12px;
+}
+
+td {
+    padding: 12px;
+    border: 1px solid #cccccc;
+    text-align: center;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
 }
 
 
-/* ================================
-   EFECTO GENERAL
-================================ */
+/* Formulario */
 
-::selection {
-    background: #e50914;
+form {
+    max-width: 600px;
+    margin: auto;
+}
+
+form label {
+    display: block;
+    margin-top: 15px;
+    font-weight: bold;
+    color: #0055a5;
+}
+
+form input,
+form select,
+form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 2px solid #cccccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+form textarea {
+    resize: vertical;
+}
+
+button {
+    background-color: #0055a5;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    margin-top: 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #ffcc00;
+    color: #0055a5;
+}
+
+
+/* Footer */
+
+footer {
+    background-color: #0055a5;
+    color: white;
+    text-align: center;
+    padding: 30px;
+}
+
+footer h2 {
+    color: #ffcc00;
+    margin-bottom: 15px;
+}
+
+footer a {
+    color: #ffcc00;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+footer a:hover {
     color: white;
 }
 
-
-/* ================================
-   RESPONSIVE - TABLETS
-================================ */
-
-@media (max-width: 900px) {
-
-    nav ul {
-        flex-wrap: wrap;
-    }
-
-    main > section:nth-child(2) {
-        grid-template-columns: 1fr 1fr;
-    }
-
-}
-
-
-/* ================================
-   RESPONSIVE - CELULARES
-================================ */
-
-@media (max-width: 600px) {
-
-    nav {
-        padding: 15px;
-    }
-
-    nav ul {
-        flex-direction: column;
-        gap: 5px;
-    }
-
-    nav ul li {
-        width: 100%;
-        text-align: center;
-    }
-
-    main > section {
-        padding: 50px 20px;
-    }
-
-    main > section:first-child {
-        min-height: 300px;
-    }
-
-    main > section:nth-child(2) {
-        grid-template-columns: 1fr;
-    }
-
-    article {
-        padding: 25px;
-    }
-
+footer p {
+    margin-top: 15px;
 }
