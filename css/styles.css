@@ -252,6 +252,142 @@ footer p {
     padding: 20px 0;
 }
 
+/* Codigo responsive para celulares */
+/* ================================= */
+/* RESPONSIVE PARA CELULARES */
+/* Pantallas de hasta 600 px */
+/* ================================= */
+
+@media (max-width: 600px) {
+
+    /* Encabezado */
+
+    header {
+        padding: 20px 10px;
+    }
+
+    header h1 {
+        font-size: 36px;
+        overflow-wrap: anywhere;
+    }
+
+    header p {
+        font-size: 15px;
+    }
+
+    /* Menú */
+
+    nav {
+        padding: 10px;
+    }
+
+    nav a {
+        margin: 5px 8px;
+        font-size: 14px;
+    }
+
+    /* Contenido principal */
+
+    main {
+        width: 94%;
+        margin: 15px auto;
+    }
+
+    /* Secciones */
+
+    section {
+        padding: 15px;
+        margin-bottom: 20px;
+    }
+
+    section h2 {
+        font-size: 22px;
+    }
+
+    /* Películas: una columna */
+
+    .peliculas {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        padding: 10px 0;
+    }
+
+    article {
+        padding: 12px;
+    }
+
+    article img {
+        height: auto;
+        max-height: 400px;
+        object-fit: contain;
+    }
+
+    /* Tabla desplazable */
+
+    .tabla-contenedor {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    table {
+        min-width: 500px;
+    }
+
+    th,
+    td {
+        padding: 8px;
+        font-size: 14px;
+    }
+
+    /* Formulario */
+
+    form {
+        max-width: 100%;
+    }
+
+    form input,
+    form select,
+    form textarea {
+        font-size: 16px;
+    }
+
+    button {
+        width: 100%;
+    }
+
+    /* Pie de página */
+
+    footer {
+        padding: 20px 10px;
+    }
+
+    footer h2 {
+        font-size: 22px;
+    }
+
+    footer a {
+        display: inline-block;
+        margin: 5px;
+    }
+
+    .tabla-contenedor {
+        width: 100%;
+        overflow-x: auto;
+    }
+
+    table {
+        min-width: 600px;
+    }
+
+    th,
+    td {
+        padding: 10px;
+        font-size: 14px;
+    }
+}
+
+}
+
 
 
 
