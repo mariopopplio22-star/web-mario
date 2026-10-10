@@ -21,7 +21,7 @@ body {
 header {
     position: relative;
     /* Degradado azul fusionado con una imagen de fondo (reemplaza 'images/fondo-header.jpg' si lo deseas) */
-    background: linear-gradient(135deg, rgba(0, 85, 150, 0.9), rgba(0, 10, 50, 0.95)), url('../images/fondo-header.webp');
+    background: linear-gradient(135deg, rgba(0, 96, 210, 0.9), rgba(0, 10, 50, 0.95)), url('../images/fondo-header.webp');
     background-size: cover;
     background-position: center;
     color: #ffcc00;
@@ -290,7 +290,7 @@ footer {
     padding: 40px 20px;
     border-top: 4px solid #ffcc00;
     box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.5);
-    background: linear-gradient(135deg, rgba(0, 85, 150, 0.9), rgba(0, 10, 50, 0.95));
+    background: linear-gradient(135deg, rgba(0, 96, 210, 0.9), rgba(0, 10, 50, 0.95));
 }
 
 footer h2 {
