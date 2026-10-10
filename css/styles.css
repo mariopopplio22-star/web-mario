@@ -1,132 +1,180 @@
 /* Configuración general */
-
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
-
-/* Estilos del cuerpo */
-
+/* Estilos del cuerpo con imagen de fondo y degradado oscuro */
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    color: #222222;
+    font-family: 'Poppins', Arial, sans-serif;
+    /* Degradado oscuro combinado con una imagen de fondo (reemplaza 'images/fondo-general.jpg' por la ruta de tu imagen) */
+    background: linear-gradient(rgba(10, 10, 15, 0.85), rgba(10, 10, 15, 0.92)), url('../images/fondo-general.webp');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: #e0e0e0;
     line-height: 1.6;
 }
 
-
-/* Encabezado */
-
+/* Encabezado con imagen de fondo, degradado azul y efectos modernos */
 header {
-    background-color: #0055a5;
+    position: relative;
+    /* Degradado azul fusionado con una imagen de fondo (reemplaza 'images/fondo-header.jpg' si lo deseas) */
+    background: linear-gradient(135deg, rgba(0, 85, 150, 0.9), rgba(0, 10, 50, 0.95)), url('../images/fondo-header.webp');
+    background-size: cover;
+    background-position: center;
     color: #ffcc00;
     text-align: center;
-    padding: 30px;
+    padding: 50px 20px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+    border-bottom: 5px solid #ffcc00;
 }
 
 header h1 {
     font-size: 65px;
     margin-bottom: 10px;
-    font-family: Impact;
+    font-family: 'Impact', sans-serif;
+    letter-spacing: 2px;
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.6);
 }
 
 header p {
-    color: white;
+    color: #ffffff;
     font-size: 18px;
+    font-weight: 300;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
 }
 
-
-/* Menú de navegación */
-
+/* Menú de navegación (Corregido para que no se mueva) */
 nav {
     background-color: #ffcc00;
     text-align: center;
     padding: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
 }
 
 nav a {
-    color: #0055a5;
+    color: #002b5c;
     text-decoration: none;
-    font-weight: bold;
-    margin: 0 15px;
+    font-weight: 700;
+    font-size: 16px;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+/* Efecto hover elegante sin alterar el tamaño ni mover los elementos */
+nav a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -4px;
+    left: 0;
+    background-color: #0055a5;
+    transition: width 0.3s ease;
 }
 
 nav a:hover {
-    color: #000000;
+    color: #0055a5;
 }
 
+nav a:hover::after {
+    width: 100%;
+}
 
 /* Contenido principal */
-
 main {
     width: 90%;
     max-width: 1200px;
-    margin: 30px auto;
+    margin: 40px auto;
 }
 
-
 /* Secciones */
-
 section {
-    background-color: white;
+    background-color: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
     margin-bottom: 30px;
-    padding: 30px;
-    border-radius: 10px;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
 }
 
 section h2 {
-    color: #0055a5;
+    color: #ffcc00;
     margin-bottom: 15px;
-    border-bottom: 4px solid #ffcc00;
+    border-bottom: 3px solid #0055a5;
     padding-bottom: 10px;
+    font-size: 28px;
 }
 
+section p {
+    color: #d1d1d1;
+}
 
 /* Imagen principal */
-
 section img {
     max-width: 100%;
     display: block;
-    margin: 20px auto;
-    border-radius: 8px;
+    margin: 25px auto;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+    transition: transform 0.3s ease;
 }
 
+section img:hover {
+    transform: scale(1.02);
+}
 
 /* Contenedor de películas */
-
 .peliculas {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
     gap: 20px;
-    justify-content: center;
+    padding: 20px 0;
 }
 
-
 /* Tarjetas de películas */
-
 article {
     width: 100%;
-    background-color: #f5f5f5;
-    border: 3px solid #0055a5;
-    border-radius: 10px;
+    background-color: rgba(20, 25, 35, 0.85);
+    border: 2px solid #0055a5;
+    border-radius: 12px;
     padding: 15px;
     text-align: center;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+article:hover {
+    transform: translateY(-5px);
+    border-color: #ffcc00;
 }
 
 article img {
     width: 100%;
-    height: 400px;
+    height: 350px;
     object-fit: cover;
-    margin: 0 0 15px 0;
+    border-radius: 8px;
+    margin-bottom: 15px;
 }
 
 article h3 {
-    color: #0055a5;
+    color: #ffcc00;
     margin-bottom: 10px;
+    font-size: 18px;
 }
 
 article a {
@@ -136,42 +184,50 @@ article a {
     padding: 10px 15px;
     margin-top: 15px;
     text-decoration: none;
-    border-radius: 5px;
+    border-radius: 6px;
+    font-weight: 600;
+    transition: background 0.3s ease, color 0.3s ease;
 }
 
 article a:hover {
     background-color: #ffcc00;
-    color: #0055a5;
+    color: #002b5c;
 }
 
-
-/* Tabla */
+/* Contenedor responsivo de la tabla */
+.tabla-contenedor {
+    width: 100%;
+    overflow-x: auto;
+    margin-top: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
 
 table {
     width: 100%;
     border-collapse: collapse;
-    margin-top: 20px;
+    background: rgba(0, 0, 0, 0.2);
+    min-width: 600px; /* Evita que se aplaste en pantallas pequeñas */
 }
 
 th {
     background-color: #0055a5;
     color: white;
-    padding: 12px;
+    padding: 14px;
 }
 
 td {
     padding: 12px;
-    border: 1px solid #cccccc;
+    border: 1px solid rgba(255, 255, 255, 0.1);
     text-align: center;
+    color: #e0e0e0;
 }
 
 tbody tr:nth-child(even) {
-    background-color: #f2f2f2;
+    background-color: rgba(255, 255, 255, 0.03);
 }
 
-
 /* Formulario */
-
 form {
     max-width: 600px;
     margin: auto;
@@ -180,19 +236,28 @@ form {
 form label {
     display: block;
     margin-top: 15px;
-    font-weight: bold;
-    color: #0055a5;
+    font-weight: 600;
+    color: #ffcc00;
 }
 
 form input,
 form select,
 form textarea {
     width: 100%;
-    padding: 10px;
+    padding: 12px;
     margin-top: 5px;
-    border: 2px solid #cccccc;
-    border-radius: 5px;
+    background: rgba(255, 255, 255, 0.1);
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    border-radius: 6px;
     font-size: 16px;
+    color: white;
+}
+
+form input:focus,
+form select:focus,
+form textarea:focus {
+    outline: none;
+    border-color: #ffcc00;
 }
 
 form textarea {
@@ -200,29 +265,32 @@ form textarea {
 }
 
 button {
-    background-color: #0055a5;
-    color: white;
+    background-color: #ffcc00;
+    color: #002b5c;
     border: none;
-    padding: 12px 20px;
+    padding: 12px 25px;
     margin-top: 20px;
-    border-radius: 5px;
+    border-radius: 6px;
     cursor: pointer;
     font-size: 16px;
+    font-weight: 700;
+    transition: background 0.3s ease;
 }
 
 button:hover {
-    background-color: #ffcc00;
+    background-color: #ffffff;
     color: #0055a5;
 }
 
-
 /* Footer */
-
 footer {
-    background-color: #0055a5;
+    background: linear-gradient(135deg, rgba(0, 30, 70, 0.95), rgba(0, 15, 35, 0.98));
     color: white;
     text-align: center;
-    padding: 30px;
+    padding: 40px 20px;
+    border-top: 4px solid #ffcc00;
+    box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.5);
+    background: linear-gradient(135deg, rgba(0, 85, 150, 0.9), rgba(0, 10, 50, 0.95));
 }
 
 footer h2 {
@@ -234,36 +302,25 @@ footer a {
     color: #ffcc00;
     text-decoration: none;
     margin: 0 10px;
+    font-weight: 600;
 }
 
 footer a:hover {
     color: white;
+    text-decoration: underline;
 }
 
 footer p {
     margin-top: 15px;
+    color: #b0b0b0;
 }
 
-/* Contenedor de las películas */
-.peliculas {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr); /* Crea 4 columnas iguales por fila */
-    gap: 20px; /* Espacio de separación entre los artículos para que no estén pegados */
-    padding: 20px 0;
-}
-
-/* Codigo responsive para celulares */
 /* ================================= */
 /* RESPONSIVE PARA CELULARES */
-/* Pantallas de hasta 600 px */
 /* ================================= */
-
 @media (max-width: 600px) {
-
-    /* Encabezado */
-
     header {
-        padding: 20px 10px;
+        padding: 30px 10px;
     }
 
     header h1 {
@@ -272,123 +329,48 @@ footer p {
     }
 
     header p {
-        font-size: 15px;
-    }
-
-    /* Menú */
-
-    nav {
-        padding: 10px;
-    }
-
-    nav a {
-        margin: 5px 8px;
         font-size: 14px;
     }
 
-    /* Contenido principal */
+    nav {
+        padding: 12px;
+    }
+
+    nav ul {
+        gap: 15px;
+    }
+
+    nav a {
+        font-size: 14px;
+    }
 
     main {
         width: 94%;
-        margin: 15px auto;
+        margin: 20px auto;
     }
-
-    /* Secciones */
 
     section {
-        padding: 15px;
+        padding: 20px;
         margin-bottom: 20px;
     }
-
-    section h2 {
-        font-size: 22px;
-    }
-
-    /* Películas: una columna */
 
     .peliculas {
         grid-template-columns: 1fr;
         gap: 20px;
-        padding: 10px 0;
-    }
-
-    article {
-        padding: 12px;
     }
 
     article img {
         height: auto;
-        max-height: 400px;
+        max-height: 350px;
         object-fit: contain;
     }
 
-    /* Tabla desplazable */
-
-    .tabla-contenedor {
-        overflow-x: auto;
-        -webkit-overflow-scrolling: touch;
-    }
-
-    table {
-        min-width: 500px;
-    }
-
-    th,
-    td {
+    th, td {
         padding: 8px;
         font-size: 14px;
-    }
-
-    /* Formulario */
-
-    form {
-        max-width: 100%;
-    }
-
-    form input,
-    form select,
-    form textarea {
-        font-size: 16px;
     }
 
     button {
         width: 100%;
     }
-
-    /* Pie de página */
-
-    footer {
-        padding: 20px 10px;
-    }
-
-    footer h2 {
-        font-size: 22px;
-    }
-
-    footer a {
-        display: inline-block;
-        margin: 5px;
-    }
-
-    .tabla-contenedor {
-        width: 100%;
-        overflow-x: auto;
-    }
-
-    table {
-        min-width: 600px;
-    }
-
-    th,
-    td {
-        padding: 10px;
-        font-size: 14px;
-    }
 }
-
-}
-
-
-
-
-
